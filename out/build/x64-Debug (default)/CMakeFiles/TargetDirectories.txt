@@ -1,0 +1,5 @@
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug (default)/ndiTracker/CMakeFiles/ndiTracker.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug (default)/ndiTracker/CMakeFiles/edit_cache.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug (default)/ndiTracker/CMakeFiles/rebuild_cache.dir
