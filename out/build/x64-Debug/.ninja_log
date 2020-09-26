@@ -1,0 +1,23 @@
+# ninja log v5
+4	764	622664643	CMakeFiles/aurora_test.dir/src/ndi_exception.cpp.obj	8700d46a32fa887
+23	822	622664643	CMakeFiles/ndiTracker.dir/src/ndi_exception.cpp.obj	49c9d752f9204825
+16	2317	622664645	CMakeFiles/ndiTracker.dir/src/serial_port.cpp.obj	c31d3a1fa7b5c96d
+0	2369	622664645	CMakeFiles/aurora_test.dir/src/serial_port.cpp.obj	d21790c85b8bdcad
+20	2418	622664645	CMakeFiles/ndiTracker.dir/src/COMM.cpp.obj	eb3baeba4a578db9
+10	2437	622664645	CMakeFiles/aurora_test.dir/src/COMM.cpp.obj	f8779dee7bd50b36
+18	2440	622664645	CMakeFiles/ndiTracker.dir/src/ndi_command_io.cpp.obj	534616186526817
+6	2457	622664645	CMakeFiles/aurora_test.dir/src/ndi_command_io.cpp.obj	df4ab6a6197da2c2
+8	2467	622664645	CMakeFiles/aurora_test.dir/src/BX.cpp.obj	3b4fd6862df78703
+25	2477	622664645	CMakeFiles/ndiTracker.dir/src/BX.cpp.obj	756de4290a2c52fe
+3	2594	622664645	CMakeFiles/aurora_test.dir/test/aurora_test.cpp.obj	b1770c1b4b470d61
+14	2648	622664645	CMakeFiles/aurora_test.dir/src/aurora.cpp.obj	d6d719eecfc7a1cd
+30	2688	622664645	CMakeFiles/ndiTracker.dir/src/aurora.cpp.obj	374033aed5c9285d
+31	3002	622664646	CMakeFiles/ndiTracker.dir/src/TX.cpp.obj	78f025159def401e
+12	3021	622664646	CMakeFiles/aurora_test.dir/src/TX.cpp.obj	ca524dd839d09ec5
+3021	3745	622664646	aurora_test.exe	f5b72f34756be11c
+28	5155	622664648	CMakeFiles/ndiTracker.dir/src/python_export.cpp.obj	ce55a03935108c37
+5158	6037	622664648	ndiTracker.dll	522160f491d75638
+5158	6037	622664648	ndiTracker.lib	522160f491d75638
+9	3921	622664787	CMakeFiles/ndiTracker.dir/src/python_export.cpp.obj	ce55a03935108c37
+3921	4433	622664787	ndiTracker.pyd	cfdae1dd87b1e675
+3921	4433	622664787	ndiTracker.lib	cfdae1dd87b1e675

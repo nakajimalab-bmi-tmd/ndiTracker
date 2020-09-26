@@ -1,0 +1,4 @@
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug/CMakeFiles/aurora_test.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug/CMakeFiles/ndiTracker.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Onogi/source/repos/ndiTracker/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
