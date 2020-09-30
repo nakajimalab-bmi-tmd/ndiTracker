@@ -17,8 +17,9 @@ namespace device {
       COMM_38400 = 3,
       COMM_57600 = 4,
       COMM_115200 = 5,
-      COMM_921600 = 6,
+      COMM_921600 = 6, 
       COMM_1228739 = 7,
+      COMM_230400 = 0x0A
     };
 
     enum class data_type

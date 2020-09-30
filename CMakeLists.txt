@@ -19,6 +19,7 @@ set(ndiTracker_SRCS
 	src/BX.cpp
 	src/TX.cpp
 	src/aurora.cpp
+	src/polaris.cpp
 )
 
 set(ndiTracker_inc
@@ -34,5 +35,9 @@ target_link_libraries(ndiTracker PUBLIC ${Python3_LIBRARIES} ${Boost_LIBRARIES})
 add_executable(aurora_test test/aurora_test.cpp ${ndiTracker_SRCS})
 target_include_directories(aurora_test PUBLIC ${ndiTracker_inc} ${Boost_INCLUDE_DIRS})
 target_link_libraries(aurora_test PUBLIC ${Boost_LIBRARIES})
+
+add_executable(polaris_test test/polaris_test.cpp ${ndiTracker_SRCS})
+target_include_directories(polaris_test PUBLIC ${ndiTracker_inc} ${Boost_INCLUDE_DIRS})
+target_link_libraries(polaris_test PUBLIC ${Boost_LIBRARIES})
 
 configure_file(test/aurora_test.py ${CMAKE_CURRENT_BINARY_DIR}/aurora_test.py COPYONLY)

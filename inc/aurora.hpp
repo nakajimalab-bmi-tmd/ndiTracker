@@ -21,7 +21,6 @@ namespace device {
     {
       static comm_param const default;
       comm_param val;
-
       COMM(comm_param param = default) : val(param) {}
     };
 

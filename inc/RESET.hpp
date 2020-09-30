@@ -25,7 +25,7 @@ namespace device {
       {
         static constexpr uint32_t value()
         {
-          return 5000;
+          return 10000;
         }
       };
 

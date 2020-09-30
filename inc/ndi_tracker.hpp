@@ -96,8 +96,6 @@ namespace device {
 
       void connect(std::string const& port_name)
       {
-        //ML_LOG_FUNCTION();
-
         serial->open(port_name);
         ndi::post_command<COMM<Device>>::exec(serial.get(), COMM<Device>());
 
@@ -114,11 +112,6 @@ namespace device {
         }
 
         this->info = this->handler(VER());
-
-        //ML_LOG_INFO(lg) << info.type_of_firmware;
-        //ML_LOG_INFO(lg) << info.ndi_serial_number;
-        //ML_LOG_INFO(lg) << info.characterization_date;
-        //ML_LOG_INFO(lg) << info.copyright_information;
       }
 
       std::string const& get_device_name() const
@@ -139,7 +132,7 @@ namespace device {
 
       }
 
-      void start()
+      void start(bool use_thread = true)
       {
         if (!is_tracking_)
         {
@@ -147,7 +140,7 @@ namespace device {
           data_for_read = &data[1];
           this->handler(TSTART());
           is_tracking_ = true;
-          thread = std::thread(&tracker::tracking, this);
+          if (use_thread) thread = std::thread(&tracker::tracking, this);
         }
       }
 
@@ -156,7 +149,7 @@ namespace device {
         if (is_tracking_)
         {
           this->is_tracking_ = false;
-          this->thread.join();
+          if (this->thread.get_id() != std::thread::id()) this->thread.join();
           this->handler(TSTOP());
         }
       }
@@ -199,10 +192,12 @@ namespace device {
 
       void tracking()
       {
+          tracking_mode mode;
+          mode.all_transformation_on();
         while (this->is_tracking_)
         {
           //std::unique_lock<std::mutex> lock(mutex);
-          *(this->data_for_write) = this->handler(BX());
+          *(this->data_for_write) = this->handler(BX(mode));
           std::swap(data_for_write, data_for_read);
         }
       }
