@@ -26,7 +26,13 @@ set(ndiTracker_inc
 	inc/
 )
 
-add_library(ndiTracker SHARED ${ndiTracker_SRCS} src/python_export.cpp)
+set(ndiTracker_PYTHON_SRC
+	src/python_polaris.cpp
+	src/python_aurora.cpp
+	src/python_export.cpp
+)
+
+add_library(ndiTracker SHARED ${ndiTracker_SRCS} ${ndiTracker_PYTHON_SRC})
 set_target_properties(ndiTracker PROPERTIES SUFFIX ".pyd")
 target_include_directories(ndiTracker PUBLIC ${ndiTracker_inc} ${Boost_INCLUDE_DIRS} ${Python3_INCLUDE_DIRS})
 target_compile_definitions(ndiTracker PRIVATE NDI_TRACKER_SRC)
@@ -41,3 +47,5 @@ target_include_directories(polaris_test PUBLIC ${ndiTracker_inc} ${Boost_INCLUDE
 target_link_libraries(polaris_test PUBLIC ${Boost_LIBRARIES})
 
 configure_file(test/aurora_test.py ${CMAKE_CURRENT_BINARY_DIR}/aurora_test.py COPYONLY)
+configure_file(test/8700340.rom ${CMAKE_CURRENT_BINARY_DIR}/8700340.rom COPYONLY)
+configure_file(test/romfiles.txt ${CMAKE_CURRENT_BINARY_DIR}/romfiles.txt COPYONLY)

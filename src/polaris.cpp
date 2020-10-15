@@ -1,5 +1,7 @@
 #include <iostream>
 #include <polaris.h>
+#include <PHRQ.hpp>
+#include <PVWR.hpp>
 
 namespace device
 {
@@ -26,8 +28,6 @@ namespace device
 		polaris::~polaris()
 		{
 		}
-
-
 
 		std::vector<uint16_t> polaris::configure_active_trackers()
 		{
@@ -70,6 +70,9 @@ namespace device
 
 		uint16_t polaris::add_passive_tracker(std::string const& rom_file)
 		{
+			auto port_handle = this->handler(PHRQ{});
+			this->handler(PVWR{ port_handle, rom_file.c_str() });
+
 			return uint16_t();
 		}
 

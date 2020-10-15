@@ -202,6 +202,14 @@ namespace device {
         }
       }
 
+      void tracking_one()
+      {
+          tracking_mode mode;
+          mode.all_transformation_on();
+          *(this->data_for_write) = this->handler(BX(mode));
+          std::swap(data_for_write, data_for_read);
+      }
+
       inline version_information const& get_version_information() const
       {
         return info;
