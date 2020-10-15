@@ -339,4 +339,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-out/build/x64-Debug/CMakeFiles/polaris_test.dir/manifest.rc
+CMakeSettings.json
