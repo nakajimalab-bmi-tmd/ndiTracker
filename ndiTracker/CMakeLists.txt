@@ -2,7 +2,10 @@
 # project specific logic here.
 #
 cmake_minimum_required (VERSION 3.8)
-find_package(Boost)
+find_package(boost_asio CONFIG REQUIRED)
+find_package(boost_crc CONFIG REQUIRED)
+find_package(boost_dynamic_bitset CONFIG REQUIRED)
+find_package(Eigen3 CONFIG REQUIRED)
 
 set(ndiTracker_SRCS
 	src/serial_port.cpp
@@ -58,15 +61,13 @@ target_sources(ndiTracker PRIVATE
 
 target_include_directories(ndiTracker PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
-	$<INSTALL_INTERFACE:inc>
-	${Boost_INCLUDE_DIRS}
 )
 
 set_target_properties(ndiTracker PROPERTIES	
 	PUBLIC_HEADER "${ndiTracker_HEADS}"
 	)
 
-target_link_libraries(ndiTracker PUBLIC ${Boost_LIBRARIES})
+target_link_libraries(ndiTracker PRIVATE Boost::asio Boost::crc Boost::dynamic_bitset Eigen3::Eigen)
 
 install(TARGETS ndiTracker
 	EXPORT ndiTracker

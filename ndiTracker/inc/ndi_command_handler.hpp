@@ -8,7 +8,7 @@
 #include <mutex>
 #include <thread>
 
-#include <boost/asio/io_context.hpp>
+//#include <boost/asio/io_context.hpp>
 #include <boost/crc.hpp>
 
 #include "serial_port.hpp"

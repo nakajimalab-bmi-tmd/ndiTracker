@@ -1,0 +1,11 @@
+{
+  "name": "nditracker",
+  "version-string": "v1.0",
+  "dependencies": [
+    "boost-asio",
+    "boost-crc",
+    "boost-dynamic-bitset",
+    "eigen3",
+    "cereal"
+  ]
+}
