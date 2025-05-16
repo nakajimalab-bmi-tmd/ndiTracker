@@ -57,7 +57,7 @@ namespace device {
     void send_break();
     
     template<template<typename T, typename A = std::allocator<T>> class Container = std::vector>
-    Container<char> read_until(char const terminate, size_t const maximum_size = std::numeric_limits<size_t>::max())
+    Container<char> read_until(char const terminate, size_t const maximum_size = (std::numeric_limits<size_t>::max)())
     {
       boost::system::error_code ec = boost::asio::error::would_block;
       size_t length = 0;
