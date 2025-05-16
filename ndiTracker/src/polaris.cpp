@@ -80,6 +80,7 @@ namespace device
 		{
 			this->update_tracker_tools();
 		}
+
 	}
 }
 

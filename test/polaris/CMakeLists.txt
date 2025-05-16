@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 3.8)
 
+project ("polaris_test")
 find_package(boost_asio CONFIG REQUIRED)
 find_package(boost_crc CONFIG REQUIRED)
 find_package(cereal CONFIG REQUIRED)

@@ -2,7 +2,7 @@
 #define include_ndi_tracker_tool_hpp
 
 #include <stdint.h>
-#include <boost/filesystem.hpp>
+#include <experimental/filesystem>
 #include <Eigen/Geometry>
 #include "ndi_types.hpp"
 
@@ -34,7 +34,7 @@ namespace device
       matrix_type const& get_transform() const;
 
       void attach_to_tracker(tracker<Device>& arg);
-      void attach_to_tracker(tracker<Device>& arg, boost::filesystem::path const& srom_file);
+      void attach_to_tracker(tracker<Device>& arg, std::experimental::filesystem::path const& srom_file);
 
       uint16_t const get_port_handle() const
       {
