@@ -68,7 +68,7 @@ namespace device {
 
       if (this->timeout.count())
       {
-        timer.expires_from_now(this->timeout);
+        timer.expires_after(this->timeout);
         timer.async_wait(std::bind(&serial_port::on_timeout, this, std::placeholders::_1));
       }
 
@@ -86,7 +86,7 @@ namespace device {
 
       if (ec) throw boost::system::system_error(ec);
 
-      char const* data = boost::asio::buffer_cast<char const*>(b.data());
+      char const* data = static_cast<char const*>(b.data().data());
       return Container<char>(data, data + length);
     }
 

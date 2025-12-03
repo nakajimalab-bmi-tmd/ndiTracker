@@ -136,7 +136,7 @@ namespace device {
   {
     boost::asio::streambuf b(maximum_size);
     size_t const length = boost::asio::read_until(serial_port_, b, terminate);
-    return std::make_tuple(boost::asio::buffer_cast<char const *>(b.data()), length);
+    return std::make_tuple(static_cast<char const *>(b.data().data()), length);
   }
 
   void serial_port::write(std::string const& command)

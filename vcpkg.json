@@ -1,6 +1,6 @@
 {
   "name": "nditracker",
-  "version-string": "v1.0",
+  "version-string": "v1.1",
   "dependencies": [
     "boost-asio",
     "boost-crc",
